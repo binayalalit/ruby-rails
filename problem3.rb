@@ -1,21 +1,10 @@
-str="hello how are you"
-h=str.count('h')
-e=str.count('e')
-l=str.count('l')
-w=str.count('w')
-a=str.count('a') 
-r=str.count('r')
-e=str.count('e')
-y=str.count('y')
-o=str.count('o')
-u=str.count('u')
-puts "h = #{h}"
-puts "e = #{e}"
-puts "l = #{l}"
-puts "w = #{w}"
-puts "a = #{a}"
-puts "r = #{r}"
-puts "e = #{e}"
-puts "y = #{y}"
-puts "o = #{o}"
-puts "u = #{u}"
+s=gets
+def count_word_characters(s)
+    h = Hash.new(0)
+    s.each_char do |char| 
+        next unless char =~/\w/
+        h[char] += 1
+    end
+    h
+end
+p count_word_characters(s)
